@@ -211,6 +211,22 @@
   .srow .tag{margin-left:auto;flex:0 0 auto;font-size:10.5px;font-weight:800;padding:4px 10px;border-radius:20px;background:var(--cream-2);color:var(--ink-soft);white-space:nowrap}
   .srow .tag.merone{background:rgba(217,166,156,.2);color:var(--rose-deep)}
 
+  /* ---------- 運用2パターン ---------- */
+  .ops{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+  .opcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .opcard.a{border-top:4px solid var(--rose)}
+  .opcard.b{border-top:4px solid var(--teal)}
+  .ophead{display:flex;gap:14px;align-items:center;padding:22px 22px 16px}
+  .opno{flex:0 0 auto;width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:700;color:#fff}
+  .opcard.a .opno{background:var(--rose)}
+  .opcard.b .opno{background:var(--teal)}
+  .ophead h3{font-size:16px;font-weight:800;letter-spacing:.02em;line-height:1.4}
+  .optag{font-size:11.5px;color:var(--ink-soft);margin-top:4px;font-weight:700}
+  .oplist{list-style:none;padding:0 22px 24px}
+  .oplist li{font-size:13px;color:var(--ink-soft);padding:10px 0;border-top:1px dashed var(--line);line-height:1.75}
+  .oplist li:first-child{border-top:none}
+  .oplist li b{color:var(--ink);font-weight:800;margin-right:5px}
+
   /* ---------- footer ---------- */
   footer{background:var(--teal-deep);color:#fff;padding:38px 0;text-align:center;margin-top:20px}
   footer .en{font-size:20px;letter-spacing:.14em}
@@ -224,6 +240,7 @@
     .step:nth-child(odd)::after{content:"";}
     .mock-grid{grid-template-columns:1fr}
     .value{grid-template-columns:1fr}
+    .ops{grid-template-columns:1fr}
     .phone{max-width:320px;margin:0 auto}
   }
   @media(max-width:420px){
@@ -546,6 +563,48 @@
 
 <div class="divider"></div>
 
+<!-- 運用体制2パターン -->
+<section>
+  <div class="wrap">
+    <div class="sec-k">WHO ｜ 誰が作って運用するか</div>
+    <h2>進め方は、御社のご希望で2通り選べます</h2>
+    <p class="sub">「Meroneで作ってお渡しする」形でも、「御社で作って社内で完結させる」形でも、どちらでも設計・伴走します。お客様データの持ち方が変わるので、両方を並べました。</p>
+    <div class="ops">
+      <div class="opcard a">
+        <div class="ophead">
+          <span class="opno">①</span>
+          <div><h3>Meroneが構築・運用伴走</h3><p class="optag">手間なく、いちばん早く始められる</p></div>
+        </div>
+        <ul class="oplist">
+          <li><b>作る人</b>Merone（フォーム・集約シート・セキュリティ設定まで一式）</li>
+          <li><b>データの持ち方</b>関係者だけに限定共有し、共同運用（回答は御社／仕組み管理と分析はMerone）</li>
+          <li><b>セキュリティ</b>閲覧を限定。お客様情報にMeroneも触れるため、取扱いの合意を交わした上で運用</li>
+          <li><b>御社の手間</b>ほぼゼロ。すぐ使える状態でお渡し</li>
+          <li><b>向いている方</b>早く始めたい／貯まった質問をMeroneの改善提案に活かしたい</li>
+        </ul>
+      </div>
+      <div class="opcard b">
+        <div class="ophead">
+          <span class="opno">②</span>
+          <div><h3>御社で構築・社内で格納</h3><p class="optag">データは社内で完結・最も安心</p></div>
+        </div>
+        <ul class="oplist">
+          <li><b>作る人</b>御社（Meroneが「そのまま作れる設計図」を全てお渡し）</li>
+          <li><b>データの持ち方</b>すべて御社のGoogle環境の中で完結</li>
+          <li><b>セキュリティ</b>お客様情報が社外に出ない、最も安心な形</li>
+          <li><b>御社の手間</b>構築と回答担当のアサインは御社側。回るようになるまでMeroneが並走</li>
+          <li><b>向いている方</b>個人情報を社内で完結させたい／自社の管理ルールに合わせたい</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cmp-note">
+      <b>どちらを選んでも共通です：</b>お客様のスクリーンショットは個人情報にあたるため、閲覧できる方を限定する設定を前提に組みます。そして貯まった質問は、Meroneが定期的に見て「よくある質問のFAQ化・返信トークの改善・仕組みでの先回り」に繋げます（②の場合は匿名のサマリを共有いただく形でも可能です）。
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- 依頼文 -->
 <section>
   <div class="wrap">
@@ -555,16 +614,16 @@
     <div class="letter">
       <div class="lh">✉️ 依頼文ドラフト</div>
       <div class="lb">
-        <p>お世話になっております。Meroneです。<br>スタッフの皆さまの「お客様対応で迷ったメッセージ」を、チームで素早く相談し、回答を蓄積していく仕組みをご提案させてください。</p>
-        <p>1to1対応の中で「この返信、どう答えるのが正解だろう」と迷う場面は日々あるかと思います。それを個人で抱えず、<b>スクリーンショットと該当メッセージのリンクをそのまま投稿するだけ</b>で相談でき、回答が一枚のボードに溜まっていく形にできればと考えています。</p>
+        <p>いつもお世話になっております。Meroneです。<br>スタッフの皆さまが「この返信、どう答えるのが正解だろう」と迷われたお客様メッセージを、その場ですぐ相談でき、回答をチームの財産として貯めていく仕組みをご提案させてください。</p>
+        <p>迷ったメッセージが届いたら、<b>スクリーンショットと該当メッセージのリンクをそのまま投稿するだけ</b>。あとは一枚のボードに集約され、回答担当の方が順番にお答えいただく流れです。答えが貯まるほど、よくある質問の見本回答が揃い、新しく入られた方の「これどう答えよう」がご自身で解決できるようになります。</p>
+        <p>進め方は、御社のご希望に合わせて2通りご用意しています。上に記載のとおり、<b>①Meroneで構築し運用まで伴走する形</b>と、<b>②御社で構築し、データを社内で完結させる形</b>のどちらでも、設計から運用の立ち上げまで伴走いたします。</p>
         <div class="todo">
           <ul>
-            <li><b>スタッフの皆さまにお願いしたいこと</b>：迷ったメッセージが来たら、フォームに①スクショ ②該当リンク ③一言 ④緊急度 を入れて送るだけ（約30秒）</li>
-            <li><b>回答担当の方にお願いしたいこと</b>：ボードの未対応を上から確認し、回答欄を記入・ステータスを更新</li>
+            <li><b>スタッフの皆さまにお願いしたいこと</b>：迷ったメッセージが来たら、スクショ・該当リンク・一言・緊急度を入れて送るだけ（約30秒）</li>
+            <li><b>回答担当の方にお願いしたいこと</b>：ボードの未対応を上から確認し、回答欄を記入・状況を更新</li>
           </ul>
         </div>
-        <p>まずは<b>投稿フォーム＋スプレッドシート</b>で軽く始められます。スタッフ側はログイン不要・スマホだけで完結します。フォームと集約シートの雛形はこちらでご用意しますので、ご確認いただき次第すぐに運用を開始できます。</p>
-        <p class="signoff">つきましては、<b>①この仕組みで進めてよいか ②回答担当をどなたにするか ③「該当リンク」に貼っていただくURL（お使いのLINE管理ツールのトークURL等）</b>の3点を教えていただけますと、雛形をご用意いたします。</p>
+        <p class="signoff">つきましては、次の3点を教えていただけますと、すぐに準備を進めます。<br>一つ、①②どちらの進め方がご希望か。<br>二つ、回答を担当される方をどなたにされるか。<br>三つ、「該当メッセージのリンク」に貼っていただけるURL（お使いのLINE管理ツールのトーク画面のURL等）があるか。</p>
       </div>
     </div>
   </div>
@@ -576,22 +635,22 @@
 <section>
   <div class="wrap">
     <div class="sec-k">STEPS ｜ 導入までの流れ</div>
-    <h2>合意いただければ、当日〜翌営業日で運用開始</h2>
+    <h2>ご希望が決まれば、すぐに準備を開始できます</h2>
     <div class="setup">
       <div class="srow">
         <div class="num"></div>
-        <div class="txt"><h4>この方式でクライアント様の合意を取る</h4><p>本ページ＋上の依頼文でご提案。回答担当・貼るリンクの種類を確認。</p></div>
+        <div class="txt"><h4>この方式で御社の合意を取る（①②どちらで進めるかも）</h4><p>本ページ＋上の依頼文でご提案。回答担当・貼るリンクの種類も確認。</p></div>
         <div class="tag">先方確認</div>
       </div>
       <div class="srow">
         <div class="num"></div>
-        <div class="txt"><h4>投稿フォームを作成</h4><p>5項目（スクショ／リンク／一言／緊急度／名前）のフォームを用意。</p></div>
-        <div class="tag merone">Merone</div>
+        <div class="txt"><h4>投稿フォームを作成</h4><p>5項目（スクショ／リンク／一言／緊急度／名前）のフォームを用意。②の場合は同じものを作れる手順書をお渡し。</p></div>
+        <div class="tag merone">①Merone｜②御社</div>
       </div>
       <div class="srow">
         <div class="num"></div>
-        <div class="txt"><h4>集約スプレッドシートを設定</h4><p>フォーム連携＋未対応の色分け・ステータス・カテゴリ列を整備。</p></div>
-        <div class="tag merone">Merone</div>
+        <div class="txt"><h4>集約シートを設定＋アクセス制限</h4><p>フォーム連携・未対応の色分け・状況・カテゴリ列を整備し、閲覧を関係者だけに限定。</p></div>
+        <div class="tag merone">①Merone｜②御社</div>
       </div>
       <div class="srow">
         <div class="num"></div>
@@ -600,7 +659,7 @@
       </div>
       <div class="srow">
         <div class="num"></div>
-        <div class="txt"><h4>運用スタート → 週次でふりかえり</h4><p>溜まった質問をFAQ化。多い質問はトーク・仕組み側で先回り対応。</p></div>
+        <div class="txt"><h4>運用スタート → 週次でふりかえり</h4><p>貯まった質問をFAQ化。多い質問はトーク・仕組み側で先回り対応（②は匿名サマリで共有も可）。</p></div>
         <div class="tag">運用</div>
       </div>
     </div>
